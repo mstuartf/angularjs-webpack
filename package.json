@@ -1,0 +1,24 @@
+{
+  "name": "angularjs-webpack",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "webpack-dev-server --open --hot",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "html-loader": "0.5.5",
+    "mini-css-extract-plugin": "0.4.4",
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
+  },
+  "dependencies": {
+    "angular": "1.5.0",
+    "angular-translate": "2.16.0",
+    "angular-translate-loader-static-files": "2.16.0",
+    "bootstrap": "4.0.0",
+    "jquery": "1.12.4",
+    "popper.js": "1.14.5"
+  }
+}

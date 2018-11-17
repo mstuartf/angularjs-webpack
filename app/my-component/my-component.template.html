@@ -1,0 +1,48 @@
+
+
+<div class="full-screen center-content">
+
+	<div class="shadow-box">
+
+		<div class="center-content padding-sm bottom-border">
+
+			<h1 class="lightgrey">
+				angularjs-webpack
+			</h1>
+
+		</div>
+
+		<div class="center-content">
+
+			<div class="padding-sm padding-sm">
+
+				<h1 class="grey">
+					The colour is:
+				</h1>
+
+			</div>
+
+			<div class="padding-sm">
+
+				<h1 ng-style="{'color': $ctrl.color}">
+					{{ $ctrl.color }}
+				</h1>
+
+			</div>
+			
+
+		</div>
+
+		<div class="center-content padding-lg">
+
+			<button 
+				class="btn btn-primary" 
+				ng-click="$ctrl.newColor()">
+				Change Colour
+			</button>
+
+		</div>
+
+	</div>
+
+</div>
