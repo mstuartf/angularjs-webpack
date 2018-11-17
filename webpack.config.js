@@ -7,17 +7,17 @@ module.exports = {
 	entry: {
         app: './app/app.js'
     },
-	output: {
-		path: path.resolve(__dirname, "dist"),
-        filename: '[name].bundle.js'
-	},
-	module: {
-        rules: [
-        {
-            test: /\.html$/,
-            use: [{
-                loader: 'html-loader',
-                options: {
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: '[name].bundle.js'
+  },
+  module: {
+    rules: [
+    {
+        test: /\.html$/,
+        use: [{
+            loader: 'html-loader',
+            options: {
                     // minimize: true
                 }
             }],
@@ -33,19 +33,32 @@ module.exports = {
             },
             "css-loader"
             ]
+        },
+        {
+            type: 'javascript/auto',
+            test: /\.json$/,
+            use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: './translations/',
+                name: "[name].[ext]"
+            }
         }
         ]
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: "vendor",
-                    chunks: "all"
-                }
+    }
+    ]
+},
+optimization: {
+    splitChunks: {
+        cacheGroups: {
+            vendor: {
+                test: /[\\/]node_modules[\\/]/,
+                name: "vendor",
+                chunks: "all"
             }
-        },
+        }
+    },
         // minimize: true
     },
     plugins: [

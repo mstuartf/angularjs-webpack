@@ -1,7 +1,7 @@
 
 var MyComponent = {
 
-	controller: ['myService', function (myService) {
+	controller: ['myService', '$translate', function (myService, $translate) {
 
 		this.newColor = function () {
 			this.color = myService.getRandomColor();
