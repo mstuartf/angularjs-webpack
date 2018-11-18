@@ -1,3 +1,5 @@
+// This is a simple service that generates a random colour hex. 
+
 
 function MyService () {
 
